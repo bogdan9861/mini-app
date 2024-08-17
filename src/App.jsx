@@ -1,20 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+
+import hamster from "./assets/hamster.png";
 
 const tg = window.Telegram.WebApp;
 
 function App() {
+  const [count, setCount] = useState(0);
+
   useEffect(() => {
     tg.ready();
   }, []);
 
-  const onClose = () => {
-    tg.close();
+  const onClick = () => {
+    setCount(count + 1);
   };
 
   return (
     <div className="App">
-      <button onClick={onClose}></button>
+      <div className="inner">
+        <div className="counter">{count}</div>
+        <button onClick={onClick}>
+          <img src={hamster} />
+        </button>
+      </div>
     </div>
   );
 }
