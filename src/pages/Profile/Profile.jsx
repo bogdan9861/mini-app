@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div className="profile container">
       <div className="profile__inner">
-        <img className="profile__img" src="" alt="" />
+        <img className="profile__img" src={tg.initDataUnsafe?.user?.photo_url} alt="" />
         <div className="profile__content">
           <span className="profile__content-name">
             {tg.initDataUnsafe?.user?.first_name}
