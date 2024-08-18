@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import InfoIndicator from "../../components/InfoIndicator/InfoIndicator.tsx";
 import { Link } from "react-router-dom";
 
-import "./Main.scss";
 import JobsList from "../../components/JobsList/JobsList.jsx";
 import { useTelegram } from "../../hooks/useTelegram.js";
+
+import "./Main.scss";
 
 const Main = () => {
   const { isReady } = useTelegram();
@@ -21,6 +22,7 @@ const Main = () => {
       </div>
       <div className="main__indicators">
         <InfoIndicator
+          className="scaleInFast"
           backgroundColor="yellow"
           description="Remote jobs"
           amount="50.9k"
@@ -28,12 +30,14 @@ const Main = () => {
         />
         <div className="main__smal-indicators">
           <InfoIndicator
+            className="scaleInMedium"
             backgroundColor="black"
             description="Full-Time"
             amount="50.9k"
             size="small"
           />
           <InfoIndicator
+            className="scaleInSlow"
             backgroundColor="grey"
             description="Part-Time"
             amount="50.9k"

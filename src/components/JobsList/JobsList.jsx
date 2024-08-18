@@ -4,6 +4,7 @@ import wallet from "../../assets/icons/wallet.png";
 import remote from "../../assets/icons/remote.png";
 import tonkeeper from "../../assets/icons/tonkeeper.png";
 
+import "../../animations/animations.css";
 import "./JobsList.scss";
 
 const JobsList = () => {
@@ -11,7 +12,7 @@ const JobsList = () => {
     <div className="jobs">
       <h1 className="jobs__title">New Jobs</h1>
       <div className="jobs__list">
-        <div className="jobs__item">
+        <div className="jobs__item LeftToRightFast">
           <img className="jobs__item-img" src={wallet} alt="" />
           <div className="jobs__item-content">
             <span className="jobs__item-name">Customer Support Specialist</span>
@@ -28,7 +29,7 @@ const JobsList = () => {
             <span className="jobs__item-date">2h ago</span>
           </div>
         </div>
-        <div className="jobs__item">
+        <div className="jobs__item LeftToRightMedium">
           <img className="jobs__item-img" src={remote} alt="" />
           <div className="jobs__item-content">
             <span className="jobs__item-name">Customer Support Specialist</span>
@@ -45,7 +46,7 @@ const JobsList = () => {
             <span className="jobs__item-date">2h ago</span>
           </div>
         </div>
-        <div className="jobs__item">
+        <div className="jobs__item LeftToRightSlow">
           <img className="jobs__item-img" src={tonkeeper} alt="" />
           <div className="jobs__item-content">
             <span className="jobs__item-name">Customer Support Specialist</span>

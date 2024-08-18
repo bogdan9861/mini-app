@@ -1,0 +1,41 @@
+.scaleInFast {
+  animation: ScaleIn 0.3s linear forwards 1;
+}
+
+.scaleInMedium {
+  animation: ScaleIn 0.6s linear forwards 1;
+}
+
+.scaleInSlow {
+  animation: ScaleIn 0.9s linear forwards 1;
+}
+
+@keyframes ScaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.LeftToRightFast {
+  animation: slideToRight 0.3s linear forwards 1;
+}
+
+.LeftToRightMedium {
+  animation: slideToRight 0.6s linear forwards 1;
+}
+
+.LeftToRightSlow {
+  animation: slideToRight 0.9s linear forwards 1;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translate(-100vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import "../../animations/animations.css";
 import "./InfoIndicator.scss";
 
 type InfoIndicatorType = {
@@ -7,6 +8,7 @@ type InfoIndicatorType = {
   size: "large" | "small";
   description: string;
   amount: string;
+  className: string;
 };
 
 const InfoIndicator = ({
@@ -14,6 +16,7 @@ const InfoIndicator = ({
   description,
   size,
   amount,
+  className,
 }: InfoIndicatorType) => {
   const colorScheme = backgroundColor != "black" ? "#040404" : "#F0F0F0";
 
@@ -37,7 +40,7 @@ const InfoIndicator = ({
 
   return (
     <div
-      className="indicator"
+      className={`indicator ${className}`}
       style={{
         background: colors[backgroundColor],
         width: sizes[size].width,
