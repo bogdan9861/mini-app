@@ -4,7 +4,7 @@ import CurrentJobs from "../../components/CurrentJobs/CurrentJobs";
 import { useTelegram } from "../../hooks/useTelegram";
 
 const Profile = () => {
-  const { user } = useTelegram();
+  const { user, tg } = useTelegram();
 
   return (
     <div className="profile container">

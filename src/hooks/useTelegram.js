@@ -1,8 +1,6 @@
 export const useTelegram = () => {
-  const tg = window.Telegram.WebApp;
-
   return {
-    rg: window.Telegram.WebApp,
+    tg: window.Telegram.WebApp,
     user: tg.initDataUnsafe?.user,
     isReady: tg.ready,
   };
