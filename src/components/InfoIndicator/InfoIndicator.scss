@@ -25,12 +25,14 @@
   // .indicator__content-desc
 
   &__content-desc {
+    font-weight: 500;
     padding-bottom: 5px;
+    font-size: 15px;
   }
 
   // .indicator__content-amount
 
   &__content-amount {
-    font-weight: 500;
+    font-weight: 600;
   }
 }

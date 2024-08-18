@@ -1,7 +1,6 @@
 .main {
   // .main__head
 
-  padding: 30px 15px 0 15px;
 
   &__head {
     display: flex;
@@ -24,6 +23,7 @@
     width: 100%;
     height: 170px;
     gap: 10px;
+    margin-bottom: 35px;
   }
 
   &__smal-indicators {

@@ -1,0 +1,77 @@
+.jobs {
+  // .jobs__title
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  // .jobs__list
+
+  &__list {
+  }
+
+  // .jobs__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8eaec;
+  }
+
+  // .jobs__item-img
+
+  &__item-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  // .jobs__item-content
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+  }
+
+  // .jobs__item-name
+
+  &__item-name {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  // .jobs__item-text
+
+  &__item-text {
+    color: #979393;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+
+  // .jobs__item-like
+
+  &__item-like {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__item-like img {
+    width: 25px;
+    height: 25px;
+  }
+
+  // .jobs__item-date
+
+  &__item-date {
+    font-weight: 500;
+    font-size: 13px;
+  }
+}

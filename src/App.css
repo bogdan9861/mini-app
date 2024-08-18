@@ -27,3 +27,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.container {
+  padding: 30px 15px 0 15px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}

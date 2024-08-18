@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,26 +8,38 @@ import {
 
 import Main from "./pages/Main/Main";
 import Profile from "./pages/Profile/Profile";
+import NavBar from "./components/NavBar/NavBar";
+
+function Layout({ children }) {
+  return (
+    <>
+      {children}
+      <NavBar />
+    </>
+  );
+}
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: (
+      <Layout>
+        <Main />
+      </Layout>
+    ),
   },
   {
     path: "/user/:id",
-    element: <Profile />,
+    element: (
+      <Layout>
+        <Profile />
+      </Layout>
+    ),
   },
 ]);
 
-const tg = window.Telegram.WebApp;
-
-function App() {
-  useEffect(() => {
-    tg.ready();
-  }, []);
-
+const App = () => {
   return <RouterProvider router={router} />;
-}
+};
 
 export default App;
