@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InfoIndicator from "../../components/InfoIndicator/InfoIndicator.tsx";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./Main.scss";
 import JobsList from "../../components/JobsList/JobsList.jsx";
+import { useTelegram } from "../../hooks/useTelegram.js";
 
 const Main = () => {
+  const { isReady } = useTelegram();
+
+  useEffect(() => {
+    isReady();
+  }, []);
+
   return (
     <div className="main container">
       <div className="main__head">
