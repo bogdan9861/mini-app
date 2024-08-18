@@ -1,0 +1,36 @@
+.indicator {
+  position: relative;
+  border-radius: 40px;
+
+  &__img {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+
+    width: 25px;
+    height: 25px;
+  }
+
+  // .indicator__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 0 0 15px 25px;
+    height: 100%;
+  }
+
+  // .indicator__content-desc
+
+  &__content-desc {
+    padding-bottom: 5px;
+  }
+
+  // .indicator__content-amount
+
+  &__content-amount {
+    font-weight: 500;
+  }
+}

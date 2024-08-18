@@ -1,31 +1,34 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
-import hamster from "./assets/hamster.png";
+import Main from "./pages/Main/Main";
+import Profile from "./pages/Profile/Profile";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+  },
+  {
+    path: "/user/:id",
+    element: <Profile />,
+  },
+]);
 
 const tg = window.Telegram.WebApp;
 
 function App() {
-  const [count, setCount] = useState(0);
-
   useEffect(() => {
     tg.ready();
   }, []);
 
-  const onClick = () => {
-    setCount(count + 1);
-  };
-
-  return (
-    <div className="App">
-      <div className="inner">
-        <div className="counter">{count}</div>
-        <button onClick={onClick}>
-          <img src={hamster} />
-        </button>
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
