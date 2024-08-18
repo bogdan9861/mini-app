@@ -1,5 +1,5 @@
 export const useTelegram = () => {
-  const tg = window.Telegram;
+  const tg = window.Telegram.WebApp;
 
   return {
     rg: window.Telegram.WebApp,
