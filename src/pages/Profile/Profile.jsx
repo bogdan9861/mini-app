@@ -10,7 +10,7 @@ const Profile = () => {
     <div className="profile container">
       <div className="profile__inner">
         <img className="profile__img" src={user?.photo_url} alt="" />
-        <span>{user?.photo_url}</span>
+        <span>{tg?.initData}</span>
         <div className="profile__content">
           <span className="profile__content-name">{user?.first_name}</span>
           <span className="profile__content-name">QA Engineer</span>
