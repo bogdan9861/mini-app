@@ -2,16 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import CurrentJobs from "../../components/CurrentJobs/CurrentJobs";
 
-const tg = window.Telegram.WebApp;
-
 const Profile = () => {
+  const tg = window.Telegram.WebApp;
+
   return (
     <div className="profile container">
       <div className="profile__inner">
         <img className="profile__img" src="" alt="" />
         <div className="profile__content">
           <span className="profile__content-name">
-            {tg.initDataUnsafe?.user?.userName}
+            {tg.initDataUnsafe?.user?.first_name}
           </span>
           <span className="profile__content-name">QA Engineer</span>
         </div>

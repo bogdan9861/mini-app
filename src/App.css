@@ -30,7 +30,7 @@ a {
 
 .container {
   padding: 30px 15px 0 15px;
-  max-width: 400px;
+  min-width: 320px;
   width: 100%;
   margin: 0 auto;
 }
