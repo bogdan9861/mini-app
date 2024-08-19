@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import wallet from "../../assets/icons/wallet.png";
 import remote from "../../assets/icons/remote.png";
@@ -12,7 +13,7 @@ const JobsList = () => {
     <div className="jobs">
       <h1 className="jobs__title">New Jobs</h1>
       <div className="jobs__list">
-        <Link className="jobs__item LeftToRightFast" to={"/job/123"}>
+        <Link className="jobs__item LeftToRightFast" to="/job/123">
           <img className="jobs__item-img" src={wallet} alt="" />
           <div className="jobs__item-content">
             <span className="jobs__item-name">Customer Support Specialist</span>
@@ -29,10 +30,12 @@ const JobsList = () => {
             <span className="jobs__item-date">2h ago</span>
           </div>
         </Link>
-        <Link className="jobs__item LeftToRightMedium" to={"/job/123"}>
+        <Link className="jobs__item LeftToRightMedium" to="/job/123">
           <img className="jobs__item-img" src={remote} alt="" />
           <div className="jobs__item-content">
-            <span className="jobs__item-name">Customer Support Specialist</span>
+            <span className="jobs__item-name">
+              Customer Support Specialist{" "}
+            </span>
             <span className="jobs__item-text">Wallet</span>
             <span className="jobs__item-text">Remote</span>
           </div>
@@ -46,7 +49,7 @@ const JobsList = () => {
             <span className="jobs__item-date">2h ago</span>
           </div>
         </Link>
-        <Link className="jobs__item LeftToRightSlow" to={"/job/123"}>
+        <Link className="jobs__item LeftToRightSlow" to="/job/123">
           <img className="jobs__item-img" src={tonkeeper} alt="" />
           <div className="jobs__item-content">
             <span className="jobs__item-name">Customer Support Specialist</span>

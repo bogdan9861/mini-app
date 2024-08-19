@@ -55,7 +55,7 @@ const Job = () => {
       <div className="job__more">
         <div className="job__more-header">
           <span className="job__more-title">More positions</span>
-          <Link>See all</Link>
+          <Link className="link">See all</Link>
         </div>
         <div className="job__more-body">
           <div className="job__more-content">
