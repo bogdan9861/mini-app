@@ -1,0 +1,19 @@
+.canvas {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.hide {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.show {
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.secure_text{
+    position: absolute;
+    top: 0;
+}

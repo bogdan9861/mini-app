@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import tonkeeper from "../../assets/icons/tonkeeper.png";
 import "../Profile/Profile.scss";
 import "./Job.scss";
-import Spoiler from "../../animations/Spoiler";
+import Spoiler from "../../components/Spoiler/Spoiler";
 
 const Job = () => {
   return (
@@ -48,8 +48,7 @@ const Job = () => {
         hic, explicabo sed iure corporis optio laboriosam modi?
       </p>
       <span className="job__salary-text">Salary</span>
-      <span className="job__salary-value">$500</span>
-      <Spoiler />
+      <Spoiler className="job__salary-value" secureText="$500" />
 
       <button className="job__btn">Apply</button>
       <div className="job__more">
