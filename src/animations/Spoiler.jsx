@@ -19,7 +19,7 @@ const Spoiler = ({ secureText }) => {
           ctx.clearRect(rndX, rndY, 2, 2);
         }, 10);
       }
-    }, 20);
+    }, 10);
 
     return () => {
       clearInterval(draw);
