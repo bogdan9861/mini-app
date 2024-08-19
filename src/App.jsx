@@ -9,6 +9,7 @@ import {
 import Main from "./pages/Main/Main";
 import Profile from "./pages/Profile/Profile";
 import NavBar from "./components/NavBar/NavBar";
+import Job from "./pages/Job/Job";
 
 function Layout({ children }) {
   return (
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Profile />
+      </Layout>
+    ),
+  },
+  {
+    path: "/job/:id",
+    element: (
+      <Layout>
+        <Job />
       </Layout>
     ),
   },
