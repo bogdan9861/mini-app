@@ -13,7 +13,7 @@ const Profile = () => {
   return (
     <div className="profile container">
       <div className="profile__inner">
-        <img className="profile__img" src={profile} alt="" />
+        <img className="profile__img" src={user?.photo_url || profile} alt="" />
         <div className="profile__content">
           <span className="profile__content-name">
             {user?.first_name || "Jane"}

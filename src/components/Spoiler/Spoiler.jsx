@@ -46,7 +46,7 @@ const Spoiler = ({ secureText, ...props }) => {
         height="20px"
         ref={cvs}
       ></canvas>
-      <span className={`secure_text ${!isOpen ? "hide" : "show"}`}>
+      <span className={`secure_text ${isOpen ? "show" : "hide"}`}>
         {secureText}
       </span>
     </div>
