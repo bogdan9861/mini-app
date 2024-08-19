@@ -17,7 +17,7 @@ const Spoiler = ({ secureText }) => {
 
         setInterval(() => {
           ctx.clearRect(rndX, rndY, 2, 2);
-        }, 10);
+        }, 30);
       }
     }, 10);
 
