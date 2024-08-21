@@ -9,8 +9,7 @@ const Spoiler = ({ secureText, ...props }) => {
 
   useEffect(() => {
     let ctx = cvs.current.getContext("2d");
-
-    let prev = performance.now();
+    
     let times = 0;
 
     requestAnimationFrame(function animate(time) {
@@ -28,8 +27,6 @@ const Spoiler = ({ secureText, ...props }) => {
           ctx.clearRect(0, 0, 100, 20);
         }
       }
-
-      prev = time;
 
       if (!isOpen) {
         requestAnimationFrame(animate);
