@@ -17,18 +17,18 @@ const Spoiler = ({ secureText, ...props }) => {
 
     let positions = [];
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 70; i++) {
       let ranX = Math.floor(Math.random() * width);
       let randY = Math.floor(Math.random() * height);
 
       positions.push({ x: ranX, y: randY, index: i });
-      ctx.fillRect(positions[i].x, positions[i].y, 2, 2);
+      ctx.fillRect(positions[i].x, positions[i].y, 1, 1);
     }
 
     requestAnimationFrame(function animate(time) {
       times++;
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 70; i++) {
         if (i === positions[i].index) {
           let nextStepX;
           let nextStepY;
@@ -50,7 +50,7 @@ const Spoiler = ({ secureText, ...props }) => {
             y: positions[i].y + nextStepY,
             index: i,
           };
-          ctx.fillRect(positions[i].x + 1, positions[i].y + 1, 2, 2);
+          ctx.fillRect(positions[i].x + 1, positions[i].y + 1, 1, 1);
         }
 
         if (times > 1) {
