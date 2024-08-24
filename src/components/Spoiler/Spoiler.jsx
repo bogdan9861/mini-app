@@ -17,7 +17,7 @@ const Spoiler = ({ secureText, ...props }) => {
 
     let positions = [];
 
-    for (let i = 0; i < 70; i++) {
+    for (let i = 0; i < 50; i++) {
       let ranX = Math.floor(Math.random() * width);
       let randY = Math.floor(Math.random() * height);
 
@@ -28,7 +28,7 @@ const Spoiler = ({ secureText, ...props }) => {
     requestAnimationFrame(function animate(time) {
       times++;
 
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 50; i++) {
         if (i === positions[i].index) {
           let nextStepX;
           let nextStepY;
@@ -66,9 +66,12 @@ const Spoiler = ({ secureText, ...props }) => {
   }, []);
 
   return (
-    <div style={{ position: "relative" }} {...props}>
+    <div
+      style={{ position: "relative" }}
+      onClick={() => setIsOpen(true)}
+      {...props}
+    >
       <canvas
-        onClick={() => setIsOpen(true)}
         className={`canvas ${isOpen ? "hide" : ""}`}
         width="100px"
         height="20px"
